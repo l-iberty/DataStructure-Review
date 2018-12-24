@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AvlTree", "AvlTree\AvlTree.vcxproj", "{367FB329-B8CB-4E2D-A0C0-0CC2A4944FCD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sort", "sort\sort.vcxproj", "{1878D204-8739-4AFD-88EA-EE6D692CC2EB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "荷兰国旗", "荷兰国旗\荷兰国旗.vcxproj", "{510AA42A-698E-4D69-9345-0ABB12FD91DC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list", "list\list.vcxproj", "{491878DA-5909-4947-9778-35466425168E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{367FB329-B8CB-4E2D-A0C0-0CC2A4944FCD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{367FB329-B8CB-4E2D-A0C0-0CC2A4944FCD}.Debug|Win32.Build.0 = Debug|Win32
+		{367FB329-B8CB-4E2D-A0C0-0CC2A4944FCD}.Release|Win32.ActiveCfg = Release|Win32
+		{367FB329-B8CB-4E2D-A0C0-0CC2A4944FCD}.Release|Win32.Build.0 = Release|Win32
+		{1878D204-8739-4AFD-88EA-EE6D692CC2EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1878D204-8739-4AFD-88EA-EE6D692CC2EB}.Debug|Win32.Build.0 = Debug|Win32
+		{1878D204-8739-4AFD-88EA-EE6D692CC2EB}.Release|Win32.ActiveCfg = Release|Win32
+		{1878D204-8739-4AFD-88EA-EE6D692CC2EB}.Release|Win32.Build.0 = Release|Win32
+		{510AA42A-698E-4D69-9345-0ABB12FD91DC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{510AA42A-698E-4D69-9345-0ABB12FD91DC}.Debug|Win32.Build.0 = Debug|Win32
+		{510AA42A-698E-4D69-9345-0ABB12FD91DC}.Release|Win32.ActiveCfg = Release|Win32
+		{510AA42A-698E-4D69-9345-0ABB12FD91DC}.Release|Win32.Build.0 = Release|Win32
+		{491878DA-5909-4947-9778-35466425168E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{491878DA-5909-4947-9778-35466425168E}.Debug|Win32.Build.0 = Debug|Win32
+		{491878DA-5909-4947-9778-35466425168E}.Release|Win32.ActiveCfg = Release|Win32
+		{491878DA-5909-4947-9778-35466425168E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
