@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "荷兰国旗", "荷兰国�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "list", "list\list.vcxproj", "{491878DA-5909-4947-9778-35466425168E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HanoiTower", "HanoiTower\HanoiTower.vcxproj", "{48AAE741-C93A-443F-AA65-EC765F7F8463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{491878DA-5909-4947-9778-35466425168E}.Debug|Win32.Build.0 = Debug|Win32
 		{491878DA-5909-4947-9778-35466425168E}.Release|Win32.ActiveCfg = Release|Win32
 		{491878DA-5909-4947-9778-35466425168E}.Release|Win32.Build.0 = Release|Win32
+		{48AAE741-C93A-443F-AA65-EC765F7F8463}.Debug|Win32.ActiveCfg = Debug|Win32
+		{48AAE741-C93A-443F-AA65-EC765F7F8463}.Debug|Win32.Build.0 = Debug|Win32
+		{48AAE741-C93A-443F-AA65-EC765F7F8463}.Release|Win32.ActiveCfg = Release|Win32
+		{48AAE741-C93A-443F-AA65-EC765F7F8463}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
