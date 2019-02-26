@@ -9,8 +9,7 @@
 
 void swap(int &x, int &y)
 {
-	int t;
-	t = x;
+	int t = x;
 	x = y;
 	y = t;
 }
@@ -289,50 +288,29 @@ void MergeSort(int x[], int len)
 
 ///////////////////////////////////////////////////////////
 
-int Median3(int x[], int left, int right)
-{
-	int center = (left + right) / 2;
-	if (x[left] > x[center])
-		swap(x[left], x[center]);
-	if (x[center] > x[right])
-		swap(x[center], x[right]);
-	if (x[left] > x[center])
-		swap(x[left], x[center]);
-
-	swap(x[center], x[right - 1]);
-	return x[right - 1];
-}
-
-#define CutOff 3
-
 void QSort(int x[], int left, int right)
 {
 	int i, j;
 	int pivot;
 
-	if (left + CutOff <= right)
-	{
-		pivot = Median3(x, left, right);
-		i = left;
-		j = right - 1;
+	if (left >= right) return;
 
-		for (;;)
-		{
-			while (x[++i] < pivot) {}
-			while (x[--j] > pivot) {}
-			if (i < j)
-				swap(x[i], x[j]);
-			else
-				break;
-		}
-		swap(x[i], x[right - 1]);
-		QSort(x, left, i - 1);
-		QSort(x, i + 1, right);
-	}
-	else
+	i = left, j = right;
+	pivot = x[left];
+	for (;;)
 	{
-		InsertSort(x + left, right - left + 1);
+		while (x[i] < pivot) i++;
+		while (x[j] > pivot) j--;
+
+		// BUG: 如果 x[i]=x[j]=pivot, 循环无法退出
+
+		if (i < j)
+			swap(x[i], x[j]);
+		else
+			break;
 	}
+	QSort(x, left, i - 1);
+	QSort(x, i + 1, right);
 }
 
 void QuickSort(int x[], int len)
@@ -375,7 +353,11 @@ int main()
 	x1[0] = MINDATA;
 	srand((unsigned int)time(NULL));
 	for (i = 1; i <= N; i++)
+	{
 		x1[i] = rand() % (N * 5);
+		printf("%d ", x1[i]);
+	}
+	printf("\n");
 
 	memcpy(x2, x1, (N + 1)*sizeof(int));
 	memcpy(x3, x1, (N + 1)*sizeof(int));
@@ -389,7 +371,7 @@ int main()
 	//InsertSort(x3 + 1, N);
 	//HeapSort(x4, N);
 	//ShellSort(x5 + 1, N);
-	MergeSort(x6 + 1, N);
+	//MergeSort(x6 + 1, N);
 	QuickSort(x7 + 1, N);
 
 	free(x1);
