@@ -4,7 +4,7 @@
 #include <Windows.h>
 #define OUTPUT
 
-#define N 15
+#define N 10
 #define MINDATA -1 // for heap-sort
 
 void swap(int &x, int &y)
@@ -290,27 +290,26 @@ void MergeSort(int x[], int len)
 
 void QSort(int x[], int left, int right)
 {
-	int i, j;
-	int pivot;
+	int i, j, pivot;
 
-	if (left >= right) return;
-
-	i = left, j = right;
-	pivot = x[left];
-	for (;;)
+	if (left < right)
 	{
-		while (x[i] < pivot) i++;
-		while (x[j] > pivot) j--;
+		i = left, j = right - 1;
+		pivot = x[left];
+		swap(x[left], x[right]);
 
-		// BUG: 如果 x[i]=x[j]=pivot, 循环无法退出
+		for (;;)
+		{
+			while (i <= right && x[i] < pivot) i++;
+			while (j >= left && x[j] > pivot) j--;
 
-		if (i < j)
-			swap(x[i], x[j]);
-		else
-			break;
+			if (i < j) swap(x[i++], x[j--]);
+			else break;
+		}
+		swap(x[i], x[right]);
+		QSort(x, left, i - 1);
+		QSort(x, i + 1, right);
 	}
-	QSort(x, left, i - 1);
-	QSort(x, i + 1, right);
 }
 
 void QuickSort(int x[], int len)
