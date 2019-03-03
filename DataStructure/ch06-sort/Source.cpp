@@ -300,7 +300,10 @@ void QSort(int x[], int left, int right)
 
 		for (;;)
 		{
+			/* i不会超过right, 因为之前把pivot放在了x[right], 起到了哨兵的作用 */
 			while (i <= right && x[i] < pivot) i++;
+
+			/* j可能会超过left, 但无关紧要, 因为最终的分割位置是i */
 			while (j >= left && x[j] > pivot) j--;
 
 			if (i < j) swap(x[i++], x[j--]);
